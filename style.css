@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Courier New', 'Consolas', monospace;
+	color: #000;
+	background-color: #1c1c1c;
+	padding: 20px;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.bg-img {
+	position: fixed;
+	top: -5vh;
+	left: -5vw;
+	width: 110vw;
+	height: 110vh;
+	z-index: 0;
+	pointer-events: none;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: blur(24px) brightness(0.9);
+}
+
+.bg-img1 {
+	background-image: url('img/bg.gif');
+	opacity: 0.7;
+}
+
+.bg-img2 {
+	background-image: url('img/bg2.gif');
+	opacity: 0.7;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	background-image: repeating-linear-gradient(to bottom,
+			transparent 0px,
+			transparent 17px,
+			#add8e6 17px,
+			#add8e6 18px);
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	padding: 36px 30px 36px 30px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border: 1px solid #ccc;
+	position: relative;
+}
+
+.container::before {
+	content: '';
+	position: absolute;
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: repeating-linear-gradient(to bottom,
+			transparent 0px,
+			transparent 15px,
+			#ff6b6b 15px,
+			#ff6b6b 25px,
+			transparent 25px,
+			transparent 40px);
+}
+
+.container::after {
+	content: '';
+	position: absolute;
+	left: 80px;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background-color: #ff6b6b;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: normal;
+	margin-bottom: 0;
+	color: #000;
+	margin-left: 100px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 18px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.games-section,
+.contact-section {
+	margin-bottom: 18px;
+	margin-left: 100px;
+}
+
+p {
+	margin-bottom: 0;
+	font-size: 12px;
+	font-family: 'Courier New', 'Consolas', monospace;
+	line-height: 18px;
+	padding: 0;
+}
+
+a {
+	color: #0000ff;
+	text-decoration: underline;
+	font-family: 'Courier New', 'Consolas', monospace;
+}
+
+a:hover {
+	color: #000080;
+	background-color: #ffff99;
+}
+
+a:visited {
+	color: #800080;
+}
+
+p:empty::after {
+	content: "\00a0";
+	white-space: pre;
+}
+
+p:contains("​") {
+	height: 18px;
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 10px;
+	}
+
+	.container {
+		padding: 36px 10px 36px 10px;
+	}
+
+	h1 {
+		font-size: 16px;
+		margin-left: 60px;
+	}
+
+	.games-section,
+	.contact-section {
+		margin-left: 60px;
+	}
+
+	p {
+		font-size: 11px;
+	}
+
+	.container::after {
+		display: none;
+	}
+}
