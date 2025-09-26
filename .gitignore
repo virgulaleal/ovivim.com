@@ -1,0 +1,15 @@
+# macOS Finder / system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon\r
+
+# Resource fork and metadata
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.DocumentRevisions-V100/
+.TemporaryItems/
+.metadata_never_index
+.VolumeIcon.icns
